@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   	https://www.springframework.org/schema/beans/spring-beans.xsd">
+	   	
+	   	<bean id="misimp" class="com.cognizant.moviecruiser.model.Movie">
+	   		<property name="id" value="1025"/>
+	   		<property name="title" value="Mission Impossible"/>
+	   		<property name="boxOffice" value="Hollywood"/>
+	   		<property name="active" value="true"/>
+	   		<property name="dateOfLaunch" value="12/05/1999"/>
+	   		<property name="genere" value="Thriller"/>
+	   		<property name="hasTeaser" value="false"/>
+	   		<property name="favorite" value="false"/>
+	   	</bean>
+	   	
+	   	<bean id="aveng" class="com.cognizant.moviecruiser.model.Movie">
+	   		<property name="id" value="1020"/>
+	   		<property name="title" value="Marvels Avengers"/>
+	   		<property name="boxOffice" value="Hollywood"/>
+	   		<property name="active" value="true"/>
+	   		<property name="dateOfLaunch" value="12/05/2009"/>
+	   		<property name="genere" value="Sci-Fi"/>
+	   		<property name="hasTeaser" value="true"/>
+	   		<property name="favorite" value="true"/>
+	   	</bean>
+	   	
+	   	<bean id="cap" class="com.cognizant.moviecruiser.model.Movie">
+	   		<property name="id" value="1028"/>
+	   		<property name="title" value="Captain America"/>
+	   		<property name="boxOffice" value="Hollywood"/>
+	   		<property name="active" value="true"/>
+	   		<property name="dateOfLaunch" value="12/06/2010"/>
+	   		<property name="genere" value="SuperHero"/>
+	   		<property name="hasTeaser" value="false"/>
+	   		<property name="favorite" value="true"/>
+	   	</bean>
+	   	
+	   	<bean id="pie" class="com.cognizant.moviecruiser.model.Movie">
+	   		<property name="id" value="1029"/>
+	   		<property name="title" value="Life Of Pi"/>
+	   		<property name="boxOffice" value="Hollywood"/>
+	   		<property name="active" value="true"/>
+	   		<property name="dateOfLaunch" value="16/05/2015"/>
+	   		<property name="genere" value="Adventure, Thriller"/>
+	   		<property name="hasTeaser" value="true"/>
+	   		<property name="favorite" value="false"/>
+	   	</bean>
+	   	
+	   	<bean id="stranger" class="com.cognizant.moviecruiser.model.Movie">
+	   		<property name="id" value="1045"/>
+	   		<property name="title" value="Stranger Things"/>
+	   		<property name="boxOffice" value="Hollywood"/>
+	   		<property name="active" value="true"/>
+	   		<property name="dateOfLaunch" value="05/09/2017"/>
+	   		<property name="genere" value="Thriller, Comedy, Superhero"/>
+	   		<property name="hasTeaser" value="true"/>
+	   		<property name="favorite" value="true"/>
+	   	</bean>
+	   	
+	   	
+	   	<bean id="movieList" class="java.util.ArrayList">
+	   		<constructor-arg>
+	   			<list>
+	   				<ref bean="stranger"></ref>
+	   				<ref bean="pie"></ref>
+	   				<ref bean="aveng"></ref>
+	   				<ref bean="cap"></ref>
+	   				<ref bean="misimp"></ref>
+	   			</list>
+	   		</constructor-arg>
+	   	</bean>
+	   	
+</beans>
